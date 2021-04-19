@@ -1,4 +1,6 @@
-const h2 = document.createElement('h2')
-h2.innerText="Hello word"
+
+
+const p = document.createElement('p')
+p.innerText=""
 const container = document.getElementById("a-list");
-container.appendChild(h2);
+container.appendChild(p);
