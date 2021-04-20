@@ -9,3 +9,9 @@ function getQuote (){
     .then (obj=>createCard(obj))
 }
 getQuote();
+
+function createCard(quotesObj){
+    const quoteContainer=document.getElementById('quotes-container')
+    const card = document.createElement('card')
+
+}
