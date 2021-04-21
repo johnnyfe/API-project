@@ -12,3 +12,6 @@ h2 {
     justify-content: center;
     font-family: Papyrus, fantasy;
 }
+div#get-quotes-button{
+    display:none;
+}

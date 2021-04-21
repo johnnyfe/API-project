@@ -6,13 +6,14 @@ function getQuote (){
     }
     fetch(url,confObj)
     .then (res=>res.json())
-    .then (obj=>createCard(obj))
+    .then (obj=>{createCard(obj)})
 }
 getQuote();
 
 function createCard(quotesObj){
     const quoteContainer=document.getElementById('quotes-container')
     const card = document.createElement('card')
+    const buttonCard=document.getElementById('get-quotes-button');
 
     const characterName=document.createElement('h3');
     const quote=document.createElement('h3');
@@ -23,6 +24,8 @@ function createCard(quotesObj){
     animeName.innerHTML=`${quotesObj.anime}`;
 
     quoteContainer.appendChild(card);
-    card.append(characterName,quote,animeName);
-    
+    buttonCard.addEventListener('click',()=>{
+        card.append(characterName,quote,animeName);
+        buttonCard.remove();
+    })
 }
