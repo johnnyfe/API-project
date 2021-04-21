@@ -1,20 +1,19 @@
 const url = `https://animechan.vercel.app/api/random`;
-
 function getQuote (){
     const confObj = {
         method:"GET"
     }
     fetch(url,confObj)
     .then (res=>res.json())
-    .then (obj=>{createCard(obj)})
+    .then((user)=> {
+    const cardAnime=createCard(user);
+    appendCard(cardAnime);
+})
 }
 getQuote();
 
 function createCard(quotesObj){
-    const quoteContainer=document.getElementById('quotes-container')
     const card = document.createElement('card')
-    const buttonCard=document.getElementById('get-quotes-button');
-
     const characterName=document.createElement('h3');
     const quote=document.createElement('h3');
     const animeName=document.createElement('h3');
@@ -23,9 +22,15 @@ function createCard(quotesObj){
     quote.innerHTML=`${quotesObj.quote}`;
     animeName.innerHTML=`${quotesObj.anime}`;
 
-    quoteContainer.appendChild(card);
+    card.append(characterName,quote,animeName);
+    return card
+}
+ function appendCard (card){
+    const quoteContainer=document.getElementById('quotes-container')
+    const buttonCard=document.getElementById('get-quotes-button');
     buttonCard.addEventListener('click',()=>{
-        card.append(characterName,quote,animeName);
+        quoteContainer.append(card);
         buttonCard.remove();
     })
+    return quoteContainer
 }
