@@ -18,9 +18,9 @@ function createCard(quotesObj){
     const quote=document.createElement('h3');
     const animeName=document.createElement('h3');
 
-    characterName.innerHTML=`${quotesObj.character}`;
+    characterName.innerHTML=`Character: ${quotesObj.character}`;
     quote.innerHTML=`${quotesObj.quote}`;
-    animeName.innerHTML=`${quotesObj.anime}`;
+    animeName.innerHTML=`Anime: ${quotesObj.anime}`;
 
     card.append(characterName,quote,animeName);
     return card

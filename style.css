@@ -1,10 +1,14 @@
 body{
-    background-color:lightcoral;
     max-width: 100%;
     margin: auto;
+    background-image: url("https://images6.alphacoders.com/106/thumb-1920-1064341.png");
+    background-color: #cccccc;
 }
+
 h1{
     display: flex;
+    font-family: 'Galindo', cursive;
+    font-size: 50px;
     align-self: center;
     justify-content: center;
     background-color: lightseagreen;
@@ -13,6 +17,7 @@ h1{
 h2 {
     display: flex;
     align-self: center;
+    font-family: 'Galindo', cursive;
     justify-content: center;
     background-color: lightseagreen;
     font-weight: bolder;
@@ -24,13 +29,16 @@ h3{
     background-color: lightseagreen;
     font-family:Papyrus, fantasy;
 }
-
-div#top-bar{
+#quotes-container{
+    margin: 0;
+    border: blue;
+    height: 100px;
+}
+#top-bar{
     display: flex;
-    height:99px;
+    height:98px;
     justify-content: space-between;
     align-self: center;
-    background-color: blue;
 }
 button{
     display: flex;
@@ -101,6 +109,18 @@ button{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+#insert-comment{
+    background-color: lightseagreen;
+    width: 50%;
+    color: black;
+    font-family: 'Galindo', cursive;
+}
+#insert-user{
+    background-color: lightseagreen;
+    width: 20%;
+    color: black;
+    font-family: 'Galindo', cursive;
 }
 
 
