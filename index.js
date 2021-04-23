@@ -42,7 +42,7 @@ commentButton.addEventListener('click', ()=>{
 }
 showCommentButton();
 
-const createComment = (user) => { 
+function createComment () { 
     const commentContainer = document.createElement('div')
     const inputUser = document.createElement('input')
     const inputComment = document.createElement('input')
@@ -71,3 +71,16 @@ const createComment = (user) => {
     usernameCommentContainer.append(commentContainer);
     return commentContainer;
 }
+
+function createLike (){
+    const likeButton=document.getElementById('like-button');
+    const counter=document.getElementById('like-counter');
+    
+    likeButton.addEventListener('click',()=> {
+    
+        counter.value= parseInt(counter.value)+1, 
+        likeButton.innerText=`Like ❤ ${counter.value}`, 
+        counter.remove();
+}, false)
+}
+createLike();
