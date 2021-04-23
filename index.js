@@ -34,3 +34,30 @@ function createCard(quotesObj){
     })
     return quoteContainer
 }
+const createComment = (user) => { 
+    const commentContainer = document.createElement('div')
+    const inputUser = document.createElement('input')
+    const inputComment = document.createElement('input')
+    const newUserName = document.createElement('p')
+    const newComment = document.createElement('p')
+    const buttonComment = document.createElement('button')
+    const usernameCommentContainer = document.getElementById('username-comment-container');
+    
+    newComment.id = "insert-comment"
+    newUserName.id = "insert-user"
+    inputUser.id="input-user"
+    inputComment.id="input-comment"
+    buttonComment.innerHTML='Submit'
+    inputUser.placeholder="Username"
+    inputComment.placeholder="Comment"
+
+    buttonComment.addEventListener('click', () => {
+        newUserName.innerText = "Username: " + inputUser.value;
+        newComment.innerText = "Comment: " + inputComment.value;
+    })
+
+    commentContainer.append(inputUser,inputComment,buttonComment,newUserName,newComment)
+    usernameCommentContainer.append(commentContainer);
+    return commentContainer;
+}
+createComment();
