@@ -56,6 +56,7 @@ function createComment () {
     inputUser.id="input-user"
     inputComment.id="input-comment"
     buttonComment.innerHTML='Submit'
+    buttonComment.id="submit-comment"
     inputUser.placeholder="Username"
     inputComment.placeholder="Comment"
 
