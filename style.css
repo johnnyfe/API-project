@@ -115,13 +115,13 @@ button{
 }
 #insert-comment{
     background-color: lightseagreen;
-    width: 30%;
+    width: 200px;
     color: black;
     font-family: 'Galindo', cursive;
 }
 #insert-user{
     background-color: lightseagreen;
-    width: 20%;
+    width: 100px;
     color: black;
     font-family: 'Galindo', cursive;
 }
