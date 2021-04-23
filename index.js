@@ -75,7 +75,7 @@ function createComment () {
 function createLike (){
     const likeButton=document.getElementById('like-button');
     const counter=document.getElementById('like-counter');
-    
+    counter.style.visibility="hidden"
     likeButton.addEventListener('click',()=> {
     
         counter.value= parseInt(counter.value)+1, 
