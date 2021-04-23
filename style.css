@@ -13,6 +13,13 @@ h2 {
     justify-content: center;
     background-color: lightseagreen;
 }
+h3{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: lightseagreen;
+    font-family:Papyrus, fantasy;
+}
 
 div#top-bar{
     height: 150px;
@@ -21,4 +28,12 @@ div#top-bar{
     align-self: center;
     background-color: blue;
 }
-
+button{
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    background-color: lightseagreen;
+    color: black;
+    font-family:Papyrus, fantasy;
+    font-weight: bolder;
+}
