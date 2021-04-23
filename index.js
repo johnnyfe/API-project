@@ -45,7 +45,7 @@ showCommentButton();
 function createComment () { 
     const commentContainer = document.createElement('div')
     const inputUser = document.createElement('input')
-    const inputComment = document.createElement('input')
+    const inputComment = document.createElement('textarea')
     const newUserName = document.createElement('p')
     const newComment = document.createElement('p')
     const buttonComment = document.createElement('button')
