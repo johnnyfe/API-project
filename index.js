@@ -59,9 +59,12 @@ const createComment = (user) => {
     inputUser.placeholder="Username"
     inputComment.placeholder="Comment"
 
-    buttonComment.addEventListener('click', () => {
+    buttonComment.addEventListener('click', (e) => {
         newUserName.innerText = "Username: " + inputUser.value;
         newComment.innerText = "Comment: " + inputComment.value;
+        inputComment.remove();
+        inputUser.remove();
+        buttonComment.remove();
     })
 
     commentContainer.append(inputUser,inputComment,buttonComment,newUserName,newComment)
