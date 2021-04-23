@@ -34,6 +34,14 @@ function createCard(quotesObj){
     })
     return quoteContainer
 }
+function showCommentButton(){
+const commentButton=document.getElementById('comment-button');
+commentButton.addEventListener('click', ()=>{
+    createComment();
+})
+}
+showCommentButton();
+
 const createComment = (user) => { 
     const commentContainer = document.createElement('div')
     const inputUser = document.createElement('input')
@@ -60,4 +68,3 @@ const createComment = (user) => {
     usernameCommentContainer.append(commentContainer);
     return commentContainer;
 }
-createComment();
